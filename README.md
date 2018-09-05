@@ -1,4 +1,4 @@
-# Insightface Training Note
+# InsightFace Training Note
 For two months, I have been training face recognition model using deepinsight’s open source project insightface (https://github.com/deepinsight/insightface.git).
 All my experiments were conducted on the Tesla P40 GPU.
 
