@@ -25,7 +25,8 @@ Now landmark is a 10x1 numpy array, containing x and y coordinates of 5 facial l
 Using train_triplet to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
 
 ## Result (verification datasets are from insightface)
-|                  | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
-| ---------------- | ------  | ---------  | ---------  | -----------  |
-| R50 (CosineFace) | 99.717  | 99.814     | 92.714     | 97.600       |
-| R50 (fine-tune)  | 99.717  | 99.800    | 93.114     | 97.783       |
+|                         | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
+| ----------------        | ------  | ---------  | ---------  | -----------  |
+| R50 (CosineFace)        | 99.717  | 99.814     | 92.714     | 97.600       |
+| R50 (fine-tune)         | 99.717  | 99.800     | 93.114     | 97.783       |
+| MobileFaceNet(ArcFace)  | 99.317  | 98.871     | 88.757     | 95.000       |
