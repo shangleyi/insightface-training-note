@@ -1,5 +1,5 @@
 # Insightface Training Note
-For two months, I have been training face recognition model using deepinsight’s open source project insightface.
+For two months, I have been training face recognition model using deepinsight’s open source project insightface (https://github.com/deepinsight/insightface.git)
 All my experiments were conducted on the Tesla P40 GPU.
 
 ## 1. Selecting the network and loss function
@@ -53,4 +53,4 @@ Use verification.py in /src/eval/ to verify accuracy.
 | R50 (CosineFace)          | 99.717  | 99.814     | 92.714     | 97.600       |
 | R50 (fine-tune)           | 99.717  | 99.800     | 93.114     | 97.783       |
 | MobileFaceNet(ArcFace)    | 99.483  | 99.429     | 90.043     | 95.550       |
-| MobileFaceNet(fine-tune)  | 99.533  | 99.629     | 90.000     | 95.967       |
+| MobileFaceNet(fine-tune)  | 99.583  | 99.614     | 90.186     | 96.050       |
