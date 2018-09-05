@@ -7,3 +7,5 @@ Insightface provides a variety of network and loss function choices, but accordi
 
 ## 2. Saving the logging, standard output and model
 I set the parameter ckpt to 2 in order to save all models (else only models that achieved lfw 99%+ will be saved). In order to know which saved model is the best one in the quickest way, I saved the logging and redirected the standard output to be appended to the log.
+
+![](insightface-training-note/QQ截图20180904110632.png)  
