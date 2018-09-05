@@ -28,3 +28,4 @@ Using train_triplet to fine-tune the model can improve the accuracy by about 0.1
 |                  | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
 | ---------------- | ------  | ---------  | ---------  | -----------  |
 | R50 (CosineFace) | 99.717  | 99.814     | 92.714     | 97.600       |
+| R50 (fine-tune)  | 99.717  | 99.814     | 93.114     | 97.783       |
