@@ -10,3 +10,21 @@ I set the parameter ckpt to 2 in order to save all models (else only models that
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110632.png)
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110723.png)
+
+## 3. Creating private training dataset
+I was given 190,000 raw photos of 50,000 identities. The faces must be cropped to 112x112 and aligned using /src/align/align_megaface. For the argument “name” I used webface.
+Codes in align_megaface.py are for photos which have attributes bbox and landmark, but mine did not. So I added the following codes:
+
+![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904105710.png)
+
+Now landmark is a 10x1 numpy array, containing x and y coordinates of 5 facial landmarks. But only 3 points are needed for estimation, so I changed the line after similarity transform to
+
+![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110506.png)
+
+## 4. Using triplet to fine-tune
+Using train_triplet to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
+
+## Result (verification datasets are from insightface)
+|                  | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
+| ---------------- | ------  | ---------  | ---------  | -----------  |
+| R50 (CosineFace) | 99.717  | 99.814     | 92.714     | 97.760       |
