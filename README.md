@@ -53,4 +53,4 @@ Use verification.py in /src/eval/ to verify accuracy.
 | R50 (CosineFace)          | 99.717  | 99.814     | 92.714     | 97.600       |
 | R50 (fine-tune)           | 99.717  | 99.800     | 93.114     | 97.783       |
 | MobileFaceNet(ArcFace)    | 99.483  | 99.429     | 90.043     | 95.550       |
-| MobileFaceNet(fine-tune)  | 99.433  | 99.457     | 89.614     | 95.733       |
+| MobileFaceNet(fine-tune)  | 99.600  | 99.543     | 90.114     | 95.900       |
