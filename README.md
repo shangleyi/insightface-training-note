@@ -24,7 +24,7 @@ Now landmark is a 10x1 numpy array, containing x and y coordinates of 5 facial l
 ## 4. Using triplet to fine-tune
 Using train_triplet.py to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
 
-## 5. Verification
+## 5. Verifying accuracy
 Use verification.py in /src/eval/ to verify accuracy.
 
 ## Result (verification datasets are from insightface)
