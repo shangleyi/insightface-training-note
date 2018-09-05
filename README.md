@@ -22,11 +22,15 @@ Now landmark is a 10x1 numpy array, containing x and y coordinates of 5 facial l
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110506.png)
 
 ## 4. Using triplet to fine-tune
-Using train_triplet to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
+Using train_triplet.py to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
+
+## 5. Verification
+Use verification.py in /src/eval/ to verify accuracy.
 
 ## Result (verification datasets are from insightface)
-|                         | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
-| ----------------        | ------  | ---------  | ---------  | -----------  |
-| R50 (CosineFace)        | 99.717  | 99.814     | 92.714     | 97.600       |
-| R50 (fine-tune)         | 99.717  | 99.800     | 93.114     | 97.783       |
-| MobileFaceNet(ArcFace)  | 99.317  | 98.871     | 88.757     | 95.000       |
+|                           | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
+| ----------------          | ------  | ---------  | ---------  | -----------  |
+| R50 (CosineFace)          | 99.717  | 99.814     | 92.714     | 97.600       |
+| R50 (fine-tune)           | 99.717  | 99.800     | 93.114     | 97.783       |
+| MobileFaceNet(ArcFace)    | 99.483  | 99.429     | 90.043     | 95.550       |
+| MobileFaceNet(fine-tune)  | 99.433  | 99.457     | 89.614     | 95.733       |
