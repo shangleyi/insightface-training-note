@@ -38,8 +38,8 @@ Notice that the folders' structure should look like the following:
 >>>photos of one individual
 
 ### Write property file and use face2rec2.py to generate .idx and .rec
-The property file has the format TOTAL NUMBER OF IDENTITIES,112,112.
-The process took me one day.
+The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>.
+The process took one day to finish.
 
 ## 4. Using triplet to fine-tune
 Using train_triplet.py to fine-tune the model can improve the accuracy by about 0.1%. All the parameters are given in insightface’s instruction.
