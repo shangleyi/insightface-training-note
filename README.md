@@ -54,3 +54,6 @@ Use verification.py in /src/eval/ to verify accuracy.
 | R50 (fine-tune)           | 99.717  | 99.800     | 93.114     | 97.783       |
 | MobileFaceNet(ArcFace)    | 99.483  | 99.429     | 90.043     | 95.550       |
 | MobileFaceNet(fine-tune)  | 99.617  | 99.657     | 90.429     | 96.050       |
+
+## Contact
+Leyi Shang(leshang@ucsd.edu / shangleyi@outlook.com)
