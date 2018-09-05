@@ -32,7 +32,7 @@ I modified glint2lst.py so that it writes all photo names to a .lst file in the 
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180905151902.png)
 
-Notice that the folders' structure should strictly follow the rule:
+Notice that the folders' structure should look like the following:
 >dataset
 >>folders of different label each represents an individual
 >>>photos of one individual
