@@ -43,7 +43,7 @@ The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>. The codes
 I used /src/data/dataset_merge.py to merge the two datasets.
 
 ## 4. Using triplet to fine-tune
-Using train_triplet.py to fine-tune the model sometimes can improve the accuracy by about 0.01%. All the parameters are given in insightface’s readme page.
+Using train_triplet.py to fine-tune the model sometimes can improve the accuracy by about 0.1%. All the parameters are given in insightface’s readme page.
 
 ## 5. Verifying accuracy
 I used /src/eval/verification.py to verify the accuracy of my model.
