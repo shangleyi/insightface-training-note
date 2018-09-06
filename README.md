@@ -46,7 +46,7 @@ I used /src/data/dataset_merge.py to merge the two datasets.
 Using train_triplet.py to fine-tune the model sometimes can improve the accuracy by about 0.01%. All the parameters are given in insightface’s readme page.
 
 ## 5. Verifying accuracy
-I used verification.py in /src/eval/ to verify the accuracy of my model.
+I used /src/eval/verification.py to verify the accuracy of my model.
 
 ## Result (verification datasets are from insightface)
 |                        | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
