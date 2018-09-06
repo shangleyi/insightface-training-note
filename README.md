@@ -41,13 +41,13 @@ The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>.
 The process took one day to finish.
 
 ### Merge the private dataset with ms1m
-I used /src/data/dataset_merge.py to 
+I used /src/data/dataset_merge.py to merge the two datasets.
 
 ## 4. Using triplet to fine-tune
 Using train_triplet.py to fine-tune the model sometimes can improve the accuracy by about 0.01%. All the parameters are given in insightface’s readme page.
 
 ## 5. Verifying accuracy
-I used verification.py in /src/eval/ to verify accuracy.
+I used verification.py in /src/eval/ to verify the accuracy of my model.
 
 ## Result (verification datasets are from insightface)
 |                        | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  |
@@ -60,7 +60,7 @@ I used verification.py in /src/eval/ to verify accuracy.
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180906082939.png)
 
 ## MobileFaceNet training process
-The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset is provided by Shenzhen Sunwin Intelligent and contains 1,900,000 raw photos of 50,000 identities collected from Chinese social media Weibo, QQ, Wechat, Tik Tok, etc.
+The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset is provided by Shenzhen Sunwin Intelligent and contains 1,900,000 raw photos of 50,000 identities collected from Chinese social media Weibo, QQ, Wechat, Tik Tok, etc. No data overlap with ms1m, lfw and agedb-30 is detected yet. The merged dataset contains around 135k individuals.
 
 After 140k iteration the highest accuracy on agedb-30 is 89.333%. I used the 89.3% model as the pretrained model and trained with argument "--lr_steps='100000,140000,160000'". After 400k iteration the highest accuracy on agedb-30 is 94.817%. I used the 94.8% model as the pretrained model and trained it on ms1m-v1 from InsightFace. After 600k iteration the highest accuracy on agedb-30 is 95.767%. I then fine-tuned the 95.7% model using /src/train_triplet.py and after 30k iteration I got the above agedb-30 96.317% result.
 
