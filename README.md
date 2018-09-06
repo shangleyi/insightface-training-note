@@ -36,9 +36,8 @@ Notice that the folders' structure should look like the following:
 >>folders of different label each represents an individual
 >>>photos of one individual
 
-### Write property file and use face2rec2.py to generate .idx and .rec
-The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>.
-The process took one day to finish.
+### Write the property file and use face2rec2.py to generate .idx and .rec
+The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>. The codes in /src/face2rec2.py directly generate a new property file when merging two datasets.
 
 ### Merge the private dataset with ms1m
 I used /src/data/dataset_merge.py to merge the two datasets.
