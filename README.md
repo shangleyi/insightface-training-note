@@ -60,7 +60,7 @@ I used verification.py in /src/eval/ to verify accuracy.
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180906082939.png)
 
 ## MobileFaceNet training process
-The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset contains 1,900,000 raw photos of 50,000 identities.
+The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset contains 1,900,000 raw photos of 50,000 identities collected from Chinese social media Weibo, QQ, Wechat, Tik Tok, etc.
 
 After 140k iteration the highest accuracy on agedb-30 is 89.333%.
 Then I used the 89.333% model as the pretrained model and trained with argument "--lr_steps='100000,140000,160000'". After 400k iteration the highest accuracy on agedb-30 is 94.817%.
