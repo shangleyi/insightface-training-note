@@ -61,7 +61,11 @@ I used verification.py in /src/eval/ to verify accuracy.
 
 ## MobileFaceNet training process
 The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset contains 1,900,000 raw photos of 50,000 identities.
-After 140k iteration the highest accuracy on agedb-30 is 89.333%. Then I used the 89.333% model as the pretrained model and trained with argument "--lr_steps='100000,140000,160000'". After 400k iteration the highest accuracy on age-db 30 is 
+
+After 140k iteration the highest accuracy on agedb-30 is 89.333%.
+Then I used the 89.333% model as the pretrained model and trained with argument "--lr_steps='100000,140000,160000'". After 400k iteration the highest accuracy on agedb-30 is 94.817%.
+I used the 94.817% model as the pretrained model and trained it on ms1m-v1 from InsightFace. After 600k iteration the highest accuracy on agedb-30 is 95.767%.
+I then fine-tuned the model using /src/train_triplet.py and after 30k iteration I got the above agedb-30 96.317% result.
 
 ## Citation
 ```
