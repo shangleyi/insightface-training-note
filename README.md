@@ -54,7 +54,7 @@ I used /src/eval/verification.py to verify the accuracy of my model.
 | R50 (CosineFace)       | 99.717  | 99.814     | 92.714     | 97.600       |
 | R50 (triplet)          | 99.717  | 99.800     | 93.114     | 97.783       |
 | MobileFaceNet(ArcFace) | 99.483  | 99.429     | 90.043     | 95.550       |
-| MobileFaceNet(triplet) | 99.650  | 99.657     | 90.529     | 96.317       |
+| MobileFaceNet(triplet) | 99.633  | 99.700     | 94.914     | 96.317       |
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180906082939.png)
 
