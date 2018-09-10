@@ -56,7 +56,7 @@ I used /src/eval/verification.py to verify the accuracy of my model.
 | MobileFaceNet(ArcFace) | 99.483  | 99.429     | 90.043     | 95.550       |
 | MobileFaceNet(triplet) | 99.633  | 99.700     | 94.914     | 96.317       |
 
-![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180906173908.png)
+![](https://github.com/shangleyi/insightface-training-note/raw/master/result.png)
 
 ## MobileFaceNet training process
 The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset is provided by Shenzhen Sunwin Intelligent and contains 1,900,000 raw photos of 50,000 identities collected from Chinese social media Weibo, QQ, Wechat, Tik Tok, etc. No data overlap with ms1m, lfw and agedb-30 is detected yet. The merged dataset contains around 135k individuals.
