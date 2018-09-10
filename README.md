@@ -68,7 +68,7 @@ The first two steps are from: https://github.com/deepinsight/insightface/issues/
 
 After 140k iteration the highest accuracy on agedb-30 is 89.333%. I used the 89.3% model as the pretrained model and trained with argument "--lr_steps='100000,140000,160000'". After 400k iteration the highest accuracy on agedb-30 is 94.817%. I used the 94.8% model as the pretrained model and trained it on ms1m-v1 from InsightFace. After 600k iteration the highest accuracy on agedb-30 is 95.767%. I then fine-tuned the 95.7% model using /src/train_triplet.py and InsightFace's ms1m-v2 dataset; after 30k iteration I got agedb-30 96.317%. Then I fine-tuned it with lr 0.004 and finally got the above agedb_30 96.533% result.
 
-## Citation
+## Acknowledgement
 ```
 @article{deng2018arcface,
 title={ArcFace: Additive Angular Margin Loss for Deep Face Recognition},
