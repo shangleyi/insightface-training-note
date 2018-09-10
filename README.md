@@ -77,6 +77,3 @@ journal={arXiv:1801.07698},
 year={2018}
 }
 ```
-
-## Contact
-Leyi Shang(leshang@ucsd.edu / shangleyi@outlook.com)
