@@ -61,6 +61,7 @@ Verification datasets are from InsightFace.
 | MobileFaceNet(triplet, Arc) | 99.583  | 99.671     | 95.357     | 96.533       | 94.320     |
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/result.png)
+![](https://github.com/shangleyi/insightface-training-note/raw/master/cfp_ff.png)
 
 ## MobileFaceNet training process
 The first two steps are from: https://github.com/deepinsight/insightface/issues/214. The dataset I used combined the ms1m-v1 dataset from InsightFace and a private dataset. The private dataset is provided by Shenzhen Sunwin Intelligent and contains 1,900,000 raw photos of 50,000 identities collected from Chinese social media Weibo, QQ, Wechat, Tik Tok, etc. No data overlap with ms1m, lfw and agedb-30 is detected yet. The merged dataset contains around 135k individuals.
