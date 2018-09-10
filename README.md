@@ -51,12 +51,12 @@ Using train_triplet.py to fine-tune the model can sometimes improve the accuracy
 I used /src/eval/verification.py to verify the accuracy of my model.
 
 ## Result (verification datasets are from insightface)
-|                        | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  | Vgg2-fp(%) |
-| ----------------       | ------  | ---------  | ---------  | -----------  | ---------- |
-| R50 (CosineFace)       | 99.717  | 99.814     | 92.714     | 97.600       |   |
-| R50 (triplet)          | 99.717  | 99.800     | 93.114     | 97.783       |   |
-| MobileFaceNet(ArcFace) | 99.483  | 99.429     | 90.043     | 95.550       |   |
-| MobileFaceNet(triplet) | 99.583  | 99.671     | 95.357     | 96.533       | 94.320     |
+|                             | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  | Vgg2-fp(%) |
+| ----------------            | ------  | ---------  | ---------  | -----------  | ---------- |
+| R50 (CosineFace)            | 99.717  | 99.814     | 92.714     | 97.600       |   |
+| R50 (triplet, Cos)          | 99.717  | 99.800     | 93.114     | 97.783       |   |
+| MobileFaceNet(ArcFace)      | 99.483  | 99.429     | 90.043     | 95.550       |   |
+| MobileFaceNet(triplet, Arc) | 99.583  | 99.671     | 95.357     | 96.533       | 94.320     |
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/result.png)
 
