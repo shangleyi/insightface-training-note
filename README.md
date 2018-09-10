@@ -50,7 +50,9 @@ Using train_triplet.py to fine-tune the model can sometimes improve the accuracy
 ## 5. Verifying accuracy
 I used /src/eval/verification.py to verify the accuracy of my model.
 
-## Result (verification datasets are from insightface)
+## Result
+Verification datasets are from InsightFace.
+
 |                             | LFW(%)  | CFP-FF(%)  | CFP-FP(%)  | AgeDB-30(%)  | Vgg2-fp(%) |
 | ----------------            | ------  | ---------  | ---------  | -----------  | ---------- |
 | R50 (CosineFace)            | 99.717  | 99.814     | 92.714     | 97.600       |   |
