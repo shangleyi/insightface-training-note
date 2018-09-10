@@ -1,6 +1,6 @@
 # InsightFace Training Note
 For two months, I have been training face recognition model using Deep Insight’s open source project InsightFace (https://github.com/deepinsight/insightface.git).
-All my experiments were conducted on the Tesla P40 GPU.
+All my experiments were conducted on the Tesla P40 GPU. All models I got from experiments are now kept by Shenzhen Sunwin Intelligent.
 
 ## 1. Selecting the network and loss function
 InsightFace provides a variety of network and loss function choices, but according to the author, training ArcFace with LresNet100E-IR yields the most accurate model which achieved LFW 99.8%+ and MegaFace 98.0%+. Unfortunately, the training process was too slow so I jumped to the second best option – training LrestNet50E-IR with CosineFace. I used the given cleaned ms1m dataset as my training set and after about 400000 iterations the most accurate model I got yields lfw 99.7% and agedb_30 97.6%.
@@ -10,6 +10,8 @@ I set the parameter ckpt to 2 in order to save all models (else only models that
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110632.png)
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110723.png)
+
+** Command "| tee -a " can save the log and std out to a file and still print to console.
 
 ## 3. Creating private training dataset
 
@@ -23,11 +25,11 @@ Now landmark is a 10x1 numpy array, containing x and y coordinates of 5 facial l
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180904110506.png)
 
 ### Change file format and rename
-After running align_megaface.py I got a dataset containing only cropped faces. It also generates a .lst file which can be directly used for the next step.
-However, if names of photos contain Chinese elements, there will be an exception during training. Also, the default raw photo format for the training is .jpg. To solve these two problems, I wrote a script which uses PIL to convert all photos to RGB, rename and save them as .jpg files.
+After running /src/align/align_megaface.py I got a dataset containing only cropped faces. It also generates a .lst file which can be directly used for the next step.
+However, if names of photos contain elements other than letters of English alphabet or numbers, there will be an exception during training. Also, the default raw photo format for the training is .jpg. To solve these two problems, I wrote a script which uses PIL to convert all photos to RGB, rename and save them as .jpg files.
 
 ### Generate .lst file
-I modified glint2lst.py so that it writes all photo names to a .lst file in the format 1 ADDRESS LABEL.
+I modified /src/data/glint2lst.py so that it writes all photo names to a .lst file in the format 1 ADDRESS LABEL.
 
 ![](https://github.com/shangleyi/insightface-training-note/raw/master/QQ截图20180905151902.png)
 
@@ -43,7 +45,7 @@ The property file has the format <TOTAL NUMBER OF IDENTITIES,112,112>. The codes
 I used /src/data/dataset_merge.py to merge the two datasets.
 
 ## 4. Using triplet to fine-tune
-Using train_triplet.py to fine-tune the model sometimes can improve the accuracy by about 0.1%. All the parameters are given in insightface’s readme page.
+Using train_triplet.py to fine-tune the model can sometimes improve the accuracy by about 0.1%. All the parameters are given in insightface’s readme page.
 
 ## 5. Verifying accuracy
 I used /src/eval/verification.py to verify the accuracy of my model.
